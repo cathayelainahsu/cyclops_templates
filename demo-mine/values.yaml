@@ -2,7 +2,6 @@ image: nginx
 name: demo-app
 replicas: 1
 version: 1.14.2
-service: 
-  enabled: true
-  type: NodePort
-  port: 80
+service: true
+serviceType: NodePort
+servicePort: 80
