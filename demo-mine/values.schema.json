@@ -15,11 +15,7 @@
     "service": {
       "title": "Service",
       "type": "object",
-      "properties": {  
-        "enabled": {
-          "type": "boolean",
-          "title": "Expose your application"
-        },
+      "properties": {
         "type": {
           "type": "string",
           "title": "Service type"
@@ -30,7 +26,6 @@
         }
       },
       "order": [
-        "enabled",
         "type",
         "port"
       ]
