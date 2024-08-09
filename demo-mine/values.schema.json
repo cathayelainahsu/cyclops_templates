@@ -15,18 +15,29 @@
     "service": {
       "description": "Expose your application",
       "type": "boolean"
+    },
+    "service type": {
+      "description": "Service type",
+      "type": "string"
+    },
+    "service port": {
+      "description": "Service port",
+      "type": "integer"
     }
   },
   "order": [
     "replicas",
     "image",
     "version",
-    "service"
+    "service",
+    "service type",
+    "service port"
   ],
   "required": [
     "replicas",
     "image",
-    "version"
+    "version",
+    "service"
   ],
   "title": "Values",
   "type": "object"
