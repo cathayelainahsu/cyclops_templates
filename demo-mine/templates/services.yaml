@@ -1,4 +1,4 @@
-{{- if .Values.service }}
+{{- if .Values.service.enabled }}
 apiVersion: v1
 kind: Service
 metadata:
@@ -6,9 +6,9 @@ metadata:
   labels:
     app: {{ .Release.Name }}
 spec:
-  type: {{ .Values.serviceType }}
+  type: {{ .Values.type }}
   ports:
-    - port: {{ .Values.servicePort }}
+    - port: {{ .Values.port }}
       targetPort: 80
       protocol: TCP
       name: http

@@ -13,31 +13,39 @@
       "type": "string"
     },
     "service": {
-      "description": "Expose your application",
-      "type": "boolean"
-    },
-    "service type": {
-      "description": "Service type",
-      "type": "string"
-    },
-    "service port": {
-      "description": "Service port",
-      "type": "integer"
+      "title": "Service",
+      "type": "object",
+      "properties": {  
+        "enabled": {
+          "type": "boolean",
+          "title": "Expose your application"
+        },
+        "type": {
+          "type": "string",
+          "title": "Service type"
+        },
+        "port": {
+          "type": "integer",
+          "title": "Service port"
+        }
+      },
+      "order": [
+        "enabled",
+        "type",
+        "port"
+      ]
     }
   },
   "order": [
     "replicas",
     "image",
     "version",
-    "service",
-    "service type",
-    "service port"
+    "service"
   ],
   "required": [
     "replicas",
     "image",
-    "version",
-    "service"
+    "version"
   ],
   "title": "Values",
   "type": "object"
